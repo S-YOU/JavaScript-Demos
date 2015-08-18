@@ -35,10 +35,10 @@
 		<a ng-if="! vm.grid.length" ng-click="vm.remountGrid()">Remount Grid</a>
 	</form>
 
-  <div dota-render=1 inline=1 watch="vm.grid.length" watch-diff="vm.form.filter" loose="false">
+<div dota-render=2 inline=1 watch="vm.grid.length" watch-diff="vm.form.filter" loose="false" debug=0>
 	<table width="100%" cellspacing="2" ng-class="{ 'filtered': vm.form.filter }">
 		<tr ng-repeat="row in vm.grid">
-			<td>
+			<td class="test">
 				{{ row.id }}
 			</td>
 			<td
@@ -49,11 +49,13 @@
 			</td>
 		</tr>
 	</table>
-  </div>
+</div>
+
 
 	<!-- Load scripts. -->
 	<script type="text/javascript" src="../../vendor/angularjs/angular-1.4.2.min.js"></script>
-	<script type="text/javascript" src="https://rawgit.com/S-YOU/doTA/master/dist/ngDoTA.min.js"></script>
+  <script type="text/javascript" src="../../vendor/doTA/ngDoTA.min.js"></script>
+	<!--<script type="text/javascript" src="https://rawgit.com/S-YOU/doTA/master/dist/ngDoTA.min.js"></script>-->
 	<script type="text/javascript">
 
 		// Create an application module for our demo.
