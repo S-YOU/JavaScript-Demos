@@ -24147,7 +24147,7 @@ var ngIncludeFillContentDirective = ['$compile',
         console.log('scope', scope)
 
         $element.html(ctrl.template);
-        console.log('template', template)
+        console.log('template', ctrl.template)
 
         $compile($element.contents())(scope);
         console.log('done fill');
